@@ -63,3 +63,24 @@ task report             # assemble report.pdf from report/sections/*.md (WeasyPr
 - `report.pdf`: the final report (built from `report/sections/*.md`).
 - `scripts/`: analysis. `capture/` has the test cases, the case runner and the pcap extractor; `frequency/` counts letters, finds patterns and draws the charts (matplotlib); `cipher/` holds the attacker's affine toolkit (EEA, modular inverse) and the key recovery. `evidence/`: captures and screenshots. `report/`: the write-up.
 - `docs/`: rules and project facts. Assignment brief: `docs/domain/psycosupport/assignment-brief.md`.
+
+## Reproduce everything
+
+With the setup above done (uv, task, Ollama + llama3.2, the /etc/hosts entry):
+
+```bash
+task server      # terminal 1
+task capture     # terminal 2: start capture, then in terminal 3:
+task run-cases   # terminal 3: send the 5 sessions, then Ctrl+C the capture
+task extract     # pcap -> ciphertexts.csv
+task freq        # frequency tables + charts
+task recover     # recover the affine key (a, b) = (17, 8)
+task decrypt     # decrypt all 20 ciphertexts, 5/5 PASS
+task report      # build report.pdf
+task package     # build dist/23i-0747_InfoSec_A1.zip for submission
+```
+
+## Submission
+
+`task package` builds `dist/23i-0747_InfoSec_A1.zip` containing `report.pdf`, `ciphertexts.csv`, `scripts/`
+and `evidence/`. Upload that ZIP to Google Classroom.

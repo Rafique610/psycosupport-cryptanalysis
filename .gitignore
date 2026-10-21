@@ -7,3 +7,6 @@ dist/
 
 # upstream reference binaries (27 MB, maadilrehman/PsycoSupport@0b1cdbf); refetch with git clone
 psycare_lab/upstream/
+
+# submission build output
+dist/

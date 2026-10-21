@@ -72,3 +72,8 @@ tasks:
     desc: Assemble report.pdf from report/sections/*.md (WeasyPrint)
     cmds:
       - uv run python scripts/report/build_report.py
+
+  package:
+    desc: Build the submission ZIP (report.pdf, ciphertexts.csv, scripts/, evidence/) in dist/
+    cmds:
+      - uv run python scripts/package.py
