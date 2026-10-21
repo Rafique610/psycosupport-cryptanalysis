@@ -52,6 +52,7 @@ task run-cases          # send the 5 synthetic test cases through the real clien
 task extract            # pcap -> ciphertexts.csv (20 ciphertexts, standard library only)
 task freq               # letter frequencies, patterns, candidate mapping, charts -> report/figures/
 task recover            # solve for the affine key (a, b) with full working + chi-squared check
+task decrypt            # decrypt all 20 ciphertexts and verify them (5/5 PASS both directions)
 ```
 
 ## Layout

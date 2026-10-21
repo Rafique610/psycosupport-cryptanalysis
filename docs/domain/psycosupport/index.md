@@ -106,4 +106,5 @@ PC-1…PC-4 setup → PC-5/6 Task 1 → PC-7/8 Task 2 → PC-9/10/11 Task 3 → 
 - Task 1: PC-5, PC-6 approved. Ollama 0.40.7 + llama3.2 (a80c4f17acd5); offline proof done 21 October 2026 (GPU then; CPU since PC-7).
 - Task 2: PC-7 capture done 21 October 2026 8:33 PM (5 streams, 70 packets); PC-7 approved. PC-8: `ciphertexts.csv` = 20 rows (case_id, direction, field, length, ciphertext), extracted by a stdlib pcapng parser because tshark isn't installed (card asked for tshark).
 - Task 3: PC-9 frequency analysis done (3,663 letters, IC 0.0647 vs English 0.0655, 118-char shared disclaimer block); approved.
-- Task 3: PC-10 key recovered from y→e, t→t: (a, b) = (17, 8), a⁻¹ = 23; χ² 163.4 vs runner-up 5,296.7; in review.
+- Task 3: PC-10 key recovered from y→e, t→t: (a, b) = (17, 8), a⁻¹ = 23; χ² 163.4 vs runner-up 5,296.7; approved.
+- Task 3: PC-11 all 20 ciphertexts decrypted, 5/5 sessions PASS both directions (vs test_cases.csv and client_runs.txt); in review.
