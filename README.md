@@ -47,10 +47,14 @@ task server             # terminal 1: http://127.0.0.1:5000, POST /submit
 task client             # terminal 2: asks for username, mood, concern
 task ollama-check       # installed models + Ollama API on localhost:11434
 task offline-proof      # network off, model still answers, network back on
+task capture            # record loopback port 5000 to evidence/task2/session_all.pcap (Ctrl+C to stop)
+task run-cases          # send the 5 synthetic test cases through the real client
+task extract            # pcap -> ciphertexts.csv (20 ciphertexts, standard library only)
 ```
 
 ## Layout
 
 - `psycare_lab/`: the app. `server.py` (HTTP + Ollama), `client.py` (terminal client), `affine.py` (shared cipher), `requirements.txt`.
-- `scripts/`: analysis (capture, frequency, cipher). `evidence/`: captures and screenshots. `report/`: the write-up.
+- `ciphertexts.csv`: the 20 intercepted ciphertexts (deliverable).
+- `scripts/`: analysis. `capture/` has the test cases, the case runner and the pcap extractor; `frequency/` and `cipher/` come next. `evidence/`: captures and screenshots. `report/`: the write-up.
 - `docs/`: rules and project facts. Assignment brief: `docs/domain/psycosupport/assignment-brief.md`.

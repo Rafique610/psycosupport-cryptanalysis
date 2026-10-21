@@ -42,3 +42,8 @@ tasks:
     desc: Run the 5 synthetic test cases through the real client (server must be running)
     cmds:
       - uv run python scripts/capture/run_cases.py
+
+  extract:
+    desc: Extract all ciphertexts from evidence/task2/session_all.pcap into ciphertexts.csv
+    cmds:
+      - uv run python scripts/capture/extract_ciphertexts.py

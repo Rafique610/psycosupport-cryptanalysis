@@ -103,4 +103,4 @@ PC-1…PC-4 setup → PC-5/6 Task 1 → PC-7/8 Task 2 → PC-9/10/11 Task 3 → 
 
 - Setup: PC-1 to PC-4 approved and pushed.
 - Task 1: PC-5, PC-6 approved. Ollama 0.40.7 + llama3.2 (a80c4f17acd5); offline proof done 21 October 2026 (GPU then; CPU since PC-7).
-- Task 2: PC-7 capture done 21 October 2026 8:33 PM (5 streams, 70 packets); evidence complete, PC-7 in review.
+- Task 2: PC-7 capture done 21 October 2026 8:33 PM (5 streams, 70 packets); PC-7 approved. PC-8: `ciphertexts.csv` = 20 rows (case_id, direction, field, length, ciphertext), extracted by a stdlib pcapng parser because tshark isn't installed (card asked for tshark).

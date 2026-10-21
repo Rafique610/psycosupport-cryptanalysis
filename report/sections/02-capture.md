@@ -57,7 +57,42 @@ Raw Follow TCP Stream text (Wireshark *Save as…*, ASCII): `evidence/task2/stre
 
 ![Figure 2.5: Follow TCP Stream, stream 4 (tester05): client→server in red, server→client in blue](../../evidence/task2/stream_4.png)
 
-## 2.4 Input analysis: what the wire reveals
+## 2.4 Intercepted ciphertexts (`ciphertexts.csv`)
+
+`scripts/capture/extract_ciphertexts.py` (`task extract`) reads the pcap with the Python standard library,
+reassembles each TCP stream per direction, and writes every encrypted JSON value to `ciphertexts.csv`
+exactly as it crossed the wire (JSON escapes such as `\n` kept). Streams appear in capture order, so
+stream 0 is case 1; the usernames' plaintext digits (`tyctyl01` … `tyctyl05`) confirm the mapping.
+
+Result: **20 ciphertexts** (5 cases × 3 request fields + 1 reply), 963 characters client→server and
+3,629 characters server→client. All 20 match the Wireshark Follow TCP Stream exports
+(`stream_<n>.txt`) character for character. The concern lengths equal the plaintext test cases
+(208, 184, 155, 173, 159), as expected from a cipher that substitutes letters one for one.
+
+| Case | Direction | Field | Length | Ciphertext (first 40 chars) |
+| --- | --- | --- | --- | --- |
+| 1 | client_to_server | username | 8 | `tyctyl01` |
+| 1 | client_to_server | mood | 7 | `ivjomkc` |
+| 1 | client_to_server | concern | 208 | `O xiby txlyy povin yjiec vyjt syyw ivh y…` |
+| 1 | server_to_client | reply | 757 | `Ot cmkvhc nowy amk'ly pyynovg i nmt mp d…` |
+| 2 | client_to_server | username | 8 | `tyctyl02` |
+| 2 | client_to_server | mood | 9 | `yjxikctyh` |
+| 2 | client_to_server | concern | 184 | `O xiby vmt zyyv cnyydovg synn pml izmkt …` |
+| 2 | server_to_client | reply | 742 | `Tyctyl02, ot cmkvhc nowy amk'ly ctlkggno…` |
+| 3 | client_to_server | username | 8 | `tyctyl03` |
+| 3 | client_to_server | mood | 6 | `nmvyna` |
+| 3 | client_to_server | concern | 155 | `O embyh tm i vys qota pml kvobylcota ivh…` |
+| 3 | server_to_client | reply | 800 | `Ot qiv zy lyinna tmkgx tm ihfkct tm i vy…` |
+| 4 | client_to_server | username | 8 | `tyctyl04` |
+| 4 | client_to_server | mood | 11 | `mbylsxyneyh` |
+| 4 | client_to_server | concern | 173 | `Ea eivigyl wyydc ihhovg vys hyihnovyc iv…` |
+| 4 | server_to_client | reply | 685 | `Ot cmkvhc nowy amk'ly pyynovg ctkqw ivh …` |
+| 5 | client_to_server | username | 8 | `tyctyl05` |
+| 5 | client_to_server | mood | 11 | `kvemtobityh` |
+| 5 | client_to_server | concern | 159 | `O kcyh tm yvfma diovtovg ivh gmovg pml s…` |
+| 5 | server_to_client | reply | 645 | `Ot cmkvhc nowy amk'ly pyynovg ctkqw ivh …` |
+
+## 2.5 Input analysis: what the wire reveals
 
 Each session is one HTTP request and one HTTP response in plain text. Only the **JSON values** are encrypted:
 
@@ -80,7 +115,7 @@ Consequences that help the attack in Section 3:
 - `Content-Length` leaks the exact message size, and the headers fingerprint the software (Python 3.14.6,
   python-requests 2.34.2).
 
-## 2.5 Ethics
+## 2.6 Ethics
 
 The capture was bound to the loopback interface of our own lab machine, filtered to the PsycoSupport
 port, and contains only our own synthetic sessions (ethics rules 1, 2 and 4).
