@@ -1,16 +1,18 @@
 # Tooling
 
-> Draft from AGENTS.md (PC-1). Fill in from INSTRUCTIONS.md after PC-3.
+Sources: AGENTS.md ("Tooling is uv"); INSTRUCTIONS.md §6. Docker (§7) is not used in this project.
 
-## Python: uv
+## Python: uv (§6)
 
-- `uv` only (`pyproject.toml` + `uv.lock`). No pip installs into system Python, no Pixi, no conda.
-- Add deps with `uv add <pkg>`; run scripts with `uv run <script>`.
-- `.venv/` is git-ignored.
+- `uv` only: `pyproject.toml` + `uv.lock` track every dependency. No Pixi, no conda,
+  no pip into system Python.
+- Never call `python` directly for project commands: `uv run python ...` / `uv run <script>`.
+- Add deps with `uv add <pkg>`. `.venv/` is git-ignored.
 
-## Task runner: Taskfile
+## Task runner: Taskfile (§6)
 
-- Common commands live in `Taskfile.yml` (go-task) so they're repeatable.
+- Every repeatable command gets a `Taskfile.yml` entry (go-task) so the user runs
+  `task <name>` instead of memorising raw commands.
 
 ## Kali paths
 

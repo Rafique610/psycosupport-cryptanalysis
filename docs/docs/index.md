@@ -25,4 +25,4 @@ FastAPI or Next.js app, and `psycare_lab/server.py` must not be changed.
 
 ## History
 
-- `INSTRUCTIONS.md` (root, written in PC-2 + PC-3): history only. Where it disagrees with `AGENTS.md` or `docs/invariants/`, those win.
+- [`INSTRUCTIONS.md`](../../INSTRUCTIONS.md) (root, PC-2 + PC-3): history only; each invariant doc names the sections it draws on. Where it disagrees with `AGENTS.md` or `docs/invariants/`, those win.

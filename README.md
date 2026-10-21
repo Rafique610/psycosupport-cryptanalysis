@@ -6,6 +6,7 @@ offline on Kali Linux, capture its loopback traffic, break its Affine cipher
 with Al-Kindi frequency analysis, and write up the results.
 
 Working rules for agents: see [AGENTS.md](AGENTS.md) and [docs/docs/index.md](docs/docs/index.md).
+[INSTRUCTIONS.md](INSTRUCTIONS.md) is the older rules file, kept as history only.
 
 ## Setup
 
