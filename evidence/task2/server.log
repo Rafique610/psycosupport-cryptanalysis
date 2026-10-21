@@ -1,0 +1,6 @@
+PsycoSupport server on http://127.0.0.1:5000 (model llama3.2)
+127.0.0.1 - - [21/Oct/2026 20:33:36] "POST /submit HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2026 20:33:50] "POST /submit HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2026 20:34:04] "POST /submit HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2026 20:34:17] "POST /submit HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2026 20:34:31] "POST /submit HTTP/1.1" 200 -

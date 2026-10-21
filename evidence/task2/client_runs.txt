@@ -1,0 +1,40 @@
+# 21 October 2026 8:33:25 PM (UTC+05:00) · 15:33:25 UTC start
+--- case 1 (tester01, anxious)
+Username: Mood: Concern: 
+Psychologist:
+It sounds like you're feeling a lot of pressure and anxiety about your exams. It's normal to feel this way, especially when there's a lot at stake. Here are a few things that might help:
+
+Try taking short breaks every 20-30 minutes to stretch, move around, and do something that relaxes you. Deep breathing exercises can also help calm your nerves. Consider making a study plan and breaking it down into smaller, manageable chunks. This can help you feel more in control and focused.
+
+Also, remind yourself that it's okay to make mistakes - it's a learning experience, and your family loves and supports you regardless of the outcome.
+
+This is not a substitute for professional help. If you are in crisis, please contact your local emergency services.
+--- case 2 (tester02, exhausted)
+Username: Mood: Concern: 
+Psychologist:
+Tester02, it sounds like you're struggling with insomnia and racing thoughts. This can be really tough to deal with. Try to focus on relaxation techniques, like deep breathing, progressive muscle relaxation, or guided imagery. You can find these online or through a meditation app. Additionally, establish a consistent sleep schedule, create a calming bedtime routine, and make your sleep environment comfortable, dark, quiet, and cool. Consider keeping a thought journal to write down your worries before bed, and see if that helps clear your mind. Remember, it's okay to take breaks and practice self-care during the day.
+
+This is not a substitute for professional help. If you are in crisis, please contact your local emergency services.
+--- case 3 (tester03, lonely)
+Username: Mood: Concern: 
+Psychologist:
+It can be really tough to adjust to a new place and feel like you're missing out on social connections. First, know that it's normal to take some time to build new relationships, especially in a new city. Here are some suggestions to help you feel more connected:
+
+* Try joining a club or group that aligns with your interests at university. This way, you can meet people who share similar passions.
+* Attend campus events and gatherings, such as cultural festivals, concerts, or sports events. These can be great opportunities to meet new people.
+* Consider reaching out to your university's student union or counseling center for support and resources to connect with others.
+
+This is not a substitute for professional help. If you are in crisis, please contact your local emergency services.
+--- case 4 (tester04, overwhelmed)
+Username: Mood: Concern: 
+Psychologist:
+It sounds like you're feeling stuck and frustrated with your workload. It's normal to feel that way, especially when faced with a never-ending list of tasks and tight deadlines. Take a step back and assess what you can control. Prioritize your tasks, focusing on the most important ones first. Consider communicating with your manager about your workload and see if there's a way to adjust the deadlines or distribute tasks more evenly. Also, try to establish a healthy work-life balance by setting boundaries, such as not checking work emails during non-work hours.
+
+This is not a substitute for professional help. If you are in crisis, please contact your local emergency services.
+--- case 5 (tester05, unmotivated)
+Username: Mood: Concern: 
+Psychologist:
+It sounds like you're feeling stuck and disconnected from activities that used to bring you joy. It's normal to go through periods where motivation and energy seem to fade. One thing you can try is to take small, gentle steps towards your interests. For painting, start by setting up your space and picking up a brush again, even if it's just for a few minutes a day. Similarly, for walks, try to get outside and take a short walk around the block. Don't put pressure on yourself to do too much, just let yourself start small.
+
+This is not a substitute for professional help. If you are in crisis, please contact your local emergency services.
+# 21 October 2026 8:34:36 PM (UTC+05:00) · 15:34:36 UTC end

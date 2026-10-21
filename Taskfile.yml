@@ -31,3 +31,14 @@ tasks:
       - nmcli networking
       - curl -sS -m 5 https://ollama.com -o /dev/null || true
       - ollama run llama3.2 "Say hi in five words"
+
+  capture:
+    desc: Capture loopback traffic on tcp port 5000 to evidence/task2/session_all.pcap (Ctrl+C to stop)
+    cmds:
+      - mkdir -p evidence/task2
+      - dumpcap -i lo -f "tcp port 5000" -w evidence/task2/session_all.pcap
+
+  run-cases:
+    desc: Run the 5 synthetic test cases through the real client (server must be running)
+    cmds:
+      - uv run python scripts/capture/run_cases.py

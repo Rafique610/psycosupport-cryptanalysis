@@ -12,10 +12,9 @@ MODEL = "llama3.2"
 SYSTEM_PROMPT = (
     "You are PsycoSupport, a supportive assistant for a psychologist's patients. "
     "Reply in plain English prose in under 120 words, with calm, practical coping suggestions. "
-    "Do not diagnose or prescribe medication. "
-    "Always end with exactly this sentence: "
-    "This is not a substitute for professional help. If you are in crisis, please contact your local emergency services."
+    "Do not diagnose or prescribe medication. Do not add a disclaimer; one is appended automatically."
 )
+DISCLAIMER = "This is not a substitute for professional help. If you are in crisis, please contact your local emergency services."
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -27,12 +26,14 @@ class Handler(BaseHTTPRequestHandler):
         username, mood, concern = (decrypt(body[k]) for k in ("username", "mood", "concern"))
         response = ollama.chat(
             model=MODEL,
+            options={"num_gpu": 0},  # CPU only: the nouveau GPU driver times out under sustained inference
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": f"Patient {username} feels {mood}. Concern: {concern}"},
             ],
         )
-        payload = json.dumps({"reply": encrypt(response["message"]["content"])}).encode()
+        reply = f"{response['message']['content'].strip()}\n\n{DISCLAIMER}"
+        payload = json.dumps({"reply": encrypt(reply)}).encode()
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(payload)))

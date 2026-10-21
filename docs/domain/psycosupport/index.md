@@ -33,9 +33,10 @@ becomes "server.py stays unchanged after PC-5".
 - Server: stdlib `http.server`, bound to `127.0.0.1:5000`. One endpoint: `POST /submit`.
 - Request JSON: `{"username", "mood", "concern"}`, each value affine-encrypted. Response JSON: `{"reply"}`, affine-encrypted.
   Both directions travel as plain HTTP over loopback, so Follow TCP Stream shows the JSON with ciphertext values.
-- LLM: `ollama.chat` with model `llama3.2` (constant `MODEL` in `server.py`). The system prompt limits replies to
-  under 120 words of supportive advice, no diagnosis or medication, and a fixed closing disclaimer sentence
-  (the "mandatory boilerplate" Task 3 exploits).
+- LLM: `ollama.chat` with model `llama3.2` (constant `MODEL` in `server.py`), forced to CPU (`num_gpu: 0`: the
+  nouveau driver times out on the RTX 3050). The system prompt limits replies to under 120 words of supportive
+  advice, no diagnosis or medication. `server.py` itself appends the fixed `DISCLAIMER` sentence to every reply
+  (PC-7, user decision: llama3.2 ignored the instruction), the "mandatory boilerplate" Task 3 exploits.
 - Encryption: `psycare_lab/affine.py`, `E(x) = (a·x + b) mod 26`. Applied to ASCII letters only; case is kept;
   digits, spaces and punctuation pass through unchanged. Client encrypts the request and decrypts the reply; server the reverse.
   Key values are deliberately not recorded in docs: Task 3 must recover them from ciphertext alone.
@@ -101,4 +102,5 @@ PC-1…PC-4 setup → PC-5/6 Task 1 → PC-7/8 Task 2 → PC-9/10/11 Task 3 → 
 ## Phase status
 
 - Setup: PC-1 to PC-4 approved and pushed.
-- Task 1: PC-5 approved; PC-6 in review. Ollama 0.40.7 + llama3.2 (a80c4f17acd5) on RTX 3050 via Vulkan; offline proof done 21 October 2026.
+- Task 1: PC-5, PC-6 approved. Ollama 0.40.7 + llama3.2 (a80c4f17acd5); offline proof done 21 October 2026 (GPU then; CPU since PC-7).
+- Task 2: PC-7 capture done 21 October 2026 8:33 PM (5 streams, 70 packets); evidence complete, PC-7 in review.

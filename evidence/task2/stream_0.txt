@@ -1,0 +1,17 @@
+POST /submit HTTP/1.1
+Host: muhammadrafique:5000
+User-Agent: python-requests/2.34.2
+Accept-Encoding: gzip, deflate, zstd
+Accept: */*
+Connection: keep-alive
+Content-Length: 266
+Content-Type: application/json
+
+{"username": "tyctyl01", "mood": "ivjomkc", "concern": "O xiby txlyy povin yjiec vyjt syyw ivh ybyla toey O cot hmsv tm ctkha ea xyilt ctiltc liqovg ivh O qivvmt pmqkc mv ivatxovg pml emly txiv i pys eovktyc. O ie smlloyh txit O sonn pion ivh hociddmovt ea pieona."}
+HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.14.6
+Date: Wed, 21 Oct 2026 15:33:36 GMT
+Content-Type: application/json
+Content-Length: 770
+
+{"reply": "Ot cmkvhc nowy amk'ly pyynovg i nmt mp dlycckly ivh ivjoyta izmkt amkl yjiec. Ot'c vmlein tm pyyn txoc sia, ycdyqoinna sxyv txyly'c i nmt it ctiwy. Xyly ily i pys txovgc txit eogxt xynd:\n\nTla tiwovg cxmlt zlyiwc ybyla 20-30 eovktyc tm ctlytqx, emby ilmkvh, ivh hm cmeytxovg txit lynijyc amk. Hyyd zlyitxovg yjylqocyc qiv incm xynd qine amkl vylbyc. Qmvcohyl eiwovg i ctkha dniv ivh zlyiwovg ot hmsv ovtm ceinnyl, eivigyizny qxkvwc. Txoc qiv xynd amk pyyn emly ov qmvtlmn ivh pmqkcyh.\n\nIncm, lyeovh amklcynp txit ot'c mwia tm eiwy eoctiwyc - ot'c i nyilvovg yjdyloyvqy, ivh amkl pieona nmbyc ivh ckddmltc amk lygilhnycc mp txy mktqmey.\n\nTxoc oc vmt i ckzctotkty pml dlmpyccomvin xynd. Op amk ily ov qlococ, dnyicy qmvtiqt amkl nmqin yeylgyvqa cylboqyc."}
