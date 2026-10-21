@@ -39,7 +39,8 @@ becomes "server.py stays unchanged after PC-5".
   (PC-7, user decision: llama3.2 ignored the instruction), the "mandatory boilerplate" Task 3 exploits.
 - Encryption: `psycare_lab/affine.py`, `E(x) = (a·x + b) mod 26`. Applied to ASCII letters only; case is kept;
   digits, spaces and punctuation pass through unchanged. Client encrypts the request and decrypts the reply; server the reverse.
-  Key values are deliberately not recorded in docs: Task 3 must recover them from ciphertext alone.
+  Key values were kept out of docs until Task 3 recovered them from ciphertext alone (PC-10: a = 17, b = 8, a⁻¹ = 23,
+  matching the source only on final confirmation).
 - Host file: the client connects to `http://muhammadrafique:5000`, which needs the line `127.0.0.1 muhammadrafique`
   in `/etc/hosts` (user's name: Muhammad Rafique). It still resolves to loopback, so capture stays on `lo`.
 
@@ -104,4 +105,5 @@ PC-1…PC-4 setup → PC-5/6 Task 1 → PC-7/8 Task 2 → PC-9/10/11 Task 3 → 
 - Setup: PC-1 to PC-4 approved and pushed.
 - Task 1: PC-5, PC-6 approved. Ollama 0.40.7 + llama3.2 (a80c4f17acd5); offline proof done 21 October 2026 (GPU then; CPU since PC-7).
 - Task 2: PC-7 capture done 21 October 2026 8:33 PM (5 streams, 70 packets); PC-7 approved. PC-8: `ciphertexts.csv` = 20 rows (case_id, direction, field, length, ciphertext), extracted by a stdlib pcapng parser because tshark isn't installed (card asked for tshark).
-- Task 3: PC-9 frequency analysis done (3,663 letters, IC 0.0647 vs English 0.0655, 118-char shared disclaimer block); in review.
+- Task 3: PC-9 frequency analysis done (3,663 letters, IC 0.0647 vs English 0.0655, 118-char shared disclaimer block); approved.
+- Task 3: PC-10 key recovered from y→e, t→t: (a, b) = (17, 8), a⁻¹ = 23; χ² 163.4 vs runner-up 5,296.7; in review.

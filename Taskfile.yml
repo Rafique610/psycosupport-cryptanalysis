@@ -55,3 +55,9 @@ tasks:
       - uv run python count.py
       - uv run python patterns.py
       - uv run python plot.py
+
+  recover:
+    desc: Recover the affine key (a, b) from the frequency mapping, with full working and a chi-squared cross-check
+    dir: scripts/cipher
+    cmds:
+      - uv run python recover_key.py
