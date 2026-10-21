@@ -1,0 +1,6 @@
+# 21 October 2026 6:38:57 PM (UTC+05:00) · 13:38:57 UTC
+$ task server
+task: [server] uv run python psycare_lab/server.py
+PsycoSupport server on http://127.0.0.1:5000 (model llama3.2)
+task: Failed to run task "server": exit status 143
+# (exit status 143 = SIGTERM: test server stopped deliberately after the ss check)

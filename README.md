@@ -33,13 +33,20 @@ task check-env          # prints: ok
 echo "127.0.0.1 muhammadrafique" | sudo tee -a /etc/hosts   # "host file" name from the brief
 ```
 
-Ollama and the model are set up in PC-6.
+Ollama (needs sudo once) and the model:
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull llama3.2
+```
 
 ## Run
 
 ```bash
 task server             # terminal 1: http://127.0.0.1:5000, POST /submit
 task client             # terminal 2: asks for username, mood, concern
+task ollama-check       # installed models + Ollama API on localhost:11434
+task offline-proof      # network off, model still answers, network back on
 ```
 
 ## Layout

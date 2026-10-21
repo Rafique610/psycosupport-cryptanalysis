@@ -15,3 +15,19 @@ tasks:
     desc: Check the uv environment imports the app's dependencies
     cmds:
       - uv run python -c "import ollama, requests; print('ok')"
+
+  ollama-check:
+    desc: Show installed Ollama models and confirm the Ollama API answers on localhost:11434
+    cmds:
+      - ollama list
+      - curl -s localhost:11434/api/tags
+
+  offline-proof:
+    desc: Turn networking off, show the model still answers, turn networking back on
+    cmds:
+      - defer: nmcli networking on
+      - nmcli networking off
+      - sleep 3
+      - nmcli networking
+      - curl -sS -m 5 https://ollama.com -o /dev/null || true
+      - ollama run llama3.2 "Say hi in five words"

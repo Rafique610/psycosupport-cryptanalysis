@@ -41,5 +41,5 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    print(f"PsycoSupport server on http://{HOST}:{PORT} (model {MODEL})")
+    print(f"PsycoSupport server on http://{HOST}:{PORT} (model {MODEL})", flush=True)
     HTTPServer((HOST, PORT), Handler).serve_forever()

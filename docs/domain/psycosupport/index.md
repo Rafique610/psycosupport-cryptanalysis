@@ -16,6 +16,11 @@ Full assignment text: [assignment-brief.md](assignment-brief.md) (converted from
 - The bundled `server` contains the `groq` client library (cloud API), i.e. the pre-revision version.
   The revised brief expects `psycare_lab/{server.py, client.py, requirements.txt}` with Groq swapped for local Ollama.
 - The upstream README mentions no "host file".
+- Reference copy kept in `psycare_lab/upstream/` (git-ignored, 27 MB; executable bit removed so it isn't run by
+  mistake: it would call the Groq cloud API). Refetch: `git clone https://github.com/maadilrehman/PsycoSupport.git`. SHA-256:
+  - `server` `7149f7e524b70567a8d19360205105d7430dec5a9fa9557a4ab8bdf3b7ebf7dd`
+  - `client` `59082c3c3f29b28620ca2712cc4b301c367db1a1226569caf714fdafb2af296a`
+  - `README.md` `9ded904160b9029fe6512235e16c4be5bae94cac5ea1d061fa76c41c5e0e680b`
 
 ## Our psycare_lab (decided 21 October 2026, PC-5)
 
@@ -96,4 +101,4 @@ PC-1…PC-4 setup → PC-5/6 Task 1 → PC-7/8 Task 2 → PC-9/10/11 Task 3 → 
 ## Phase status
 
 - Setup: PC-1 to PC-4 approved and pushed.
-- Task 1: PC-5 in review.
+- Task 1: PC-5 approved; PC-6 in review. Ollama 0.40.7 + llama3.2 (a80c4f17acd5) on RTX 3050 via Vulkan; offline proof done 21 October 2026.

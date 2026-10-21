@@ -1,0 +1,8 @@
+# 21 October 2026 6:38:05 PM (UTC+05:00) · 13:38:05 UTC
+$ nmcli networking
+disabled
+$ curl -sS -m 5 https://ollama.com -o /dev/null
+curl: (6) Could not resolve host: ollama.com
+$ ollama run llama3.2 "Say hi in five words"
+Hello from the digital realm
+
