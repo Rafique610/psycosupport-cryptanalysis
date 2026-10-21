@@ -18,5 +18,32 @@ Requirements: Kali Linux, git, [uv](https://docs.astral.sh/uv/), [Ollama](https:
 cd ~/Desktop/"Info A1"
 ```
 
-Further steps (uv environment, Ollama models, running the server) are added as
-cards PC-5 and PC-6 land.
+Tools (no sudo needed; both install to `~/.local/bin`):
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+sh -c "$(curl -fsSL https://taskfile.dev/install.sh)" -- -b ~/.local/bin
+```
+
+Python environment and app:
+
+```bash
+uv sync                 # installs ollama + requests from pyproject.toml / uv.lock
+task check-env          # prints: ok
+echo "127.0.0.1 muhammadrafique" | sudo tee -a /etc/hosts   # "host file" name from the brief
+```
+
+Ollama and the model are set up in PC-6.
+
+## Run
+
+```bash
+task server             # terminal 1: http://127.0.0.1:5000, POST /submit
+task client             # terminal 2: asks for username, mood, concern
+```
+
+## Layout
+
+- `psycare_lab/`: the app. `server.py` (HTTP + Ollama), `client.py` (terminal client), `affine.py` (shared cipher), `requirements.txt`.
+- `scripts/`: analysis (capture, frequency, cipher). `evidence/`: captures and screenshots. `report/`: the write-up.
+- `docs/`: rules and project facts. Assignment brief: `docs/domain/psycosupport/assignment-brief.md`.

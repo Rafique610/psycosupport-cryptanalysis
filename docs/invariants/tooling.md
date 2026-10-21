@@ -13,6 +13,7 @@ Sources: AGENTS.md ("Tooling is uv"); INSTRUCTIONS.md §6. Docker (§7) is not u
 
 - Every repeatable command gets a `Taskfile.yml` entry (go-task) so the user runs
   `task <name>` instead of memorising raw commands.
+- On this Kali box `uv` and `task` live in `~/.local/bin` (installed without sudo).
 
 ## Kali paths
 

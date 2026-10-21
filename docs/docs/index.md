@@ -5,6 +5,7 @@ Knowledge map for this repo. Start at `AGENTS.md`, then come here.
 ## Domain (what's true about this project)
 
 - [PsycoSupport Cryptanalysis](../domain/psycosupport/index.md): assignment facts, deliverables, rubric, layout, card order.
+- [Assignment brief](../domain/psycosupport/assignment-brief.md): the full assignment text (verbatim).
 
 ## Invariants (rules; load only the one your task needs)
 

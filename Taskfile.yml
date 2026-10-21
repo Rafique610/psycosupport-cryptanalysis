@@ -1,0 +1,17 @@
+version: "3"
+
+tasks:
+  server:
+    desc: Run the PsycoSupport server on 127.0.0.1:5000 (needs Ollama running)
+    cmds:
+      - uv run python psycare_lab/server.py
+
+  client:
+    desc: Run the PsycoSupport terminal client (needs the /etc/hosts entry for muhammadrafique)
+    cmds:
+      - uv run python psycare_lab/client.py
+
+  check-env:
+    desc: Check the uv environment imports the app's dependencies
+    cmds:
+      - uv run python -c "import ollama, requests; print('ok')"
