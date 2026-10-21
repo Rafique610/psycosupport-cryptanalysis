@@ -108,4 +108,5 @@ PC-1…PC-4 setup → PC-5/6 Task 1 → PC-7/8 Task 2 → PC-9/10/11 Task 3 → 
 - Task 3: PC-9 frequency analysis done (3,663 letters, IC 0.0647 vs English 0.0655, 118-char shared disclaimer block); approved.
 - Task 3: PC-10 key recovered from y→e, t→t: (a, b) = (17, 8), a⁻¹ = 23; χ² 163.4 vs runner-up 5,296.7; approved.
 - Task 3: PC-11 all 20 ciphertexts decrypted, 5/5 sessions PASS both directions (vs test_cases.csv and client_runs.txt); approved.
-- Task 4: PC-12 security analysis written (report/sections/04-security-analysis.md): UDS 0600 + SO_PEERCRED, TLS 1.3 self-signed + pinning, optional AEAD; brute force of all 312 keys = 0.14 s; in review.
+- Task 4: PC-12 security analysis written (report/sections/04-security-analysis.md): UDS 0600 + SO_PEERCRED, TLS 1.3 self-signed + pinning, optional AEAD; approved.
+- Report: PC-13 report.pdf assembled (35 pp, WeasyPrint via uv dev deps; title, intro+SVG diagram, Tasks 1-4, input analysis, references, appendix). Ethical reflection left as a prompt for the student (academic integrity). Roll no. 23i-0747. In review.

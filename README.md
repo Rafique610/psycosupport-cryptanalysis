@@ -53,11 +53,13 @@ task extract            # pcap -> ciphertexts.csv (20 ciphertexts, standard libr
 task freq               # letter frequencies, patterns, candidate mapping, charts -> report/figures/
 task recover            # solve for the affine key (a, b) with full working + chi-squared check
 task decrypt            # decrypt all 20 ciphertexts and verify them (5/5 PASS both directions)
+task report             # assemble report.pdf from report/sections/*.md (WeasyPrint)
 ```
 
 ## Layout
 
 - `psycare_lab/`: the app. `server.py` (HTTP + Ollama), `client.py` (terminal client), `affine.py` (shared cipher), `requirements.txt`.
 - `ciphertexts.csv`: the 20 intercepted ciphertexts (deliverable).
+- `report.pdf`: the final report (built from `report/sections/*.md`).
 - `scripts/`: analysis. `capture/` has the test cases, the case runner and the pcap extractor; `frequency/` counts letters, finds patterns and draws the charts (matplotlib); `cipher/` holds the attacker's affine toolkit (EEA, modular inverse) and the key recovery. `evidence/`: captures and screenshots. `report/`: the write-up.
 - `docs/`: rules and project facts. Assignment brief: `docs/domain/psycosupport/assignment-brief.md`.

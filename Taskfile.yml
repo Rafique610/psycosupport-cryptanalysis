@@ -67,3 +67,8 @@ tasks:
     dir: scripts/cipher
     cmds:
       - uv run python decrypt_all.py
+
+  report:
+    desc: Assemble report.pdf from report/sections/*.md (WeasyPrint)
+    cmds:
+      - uv run python scripts/report/build_report.py

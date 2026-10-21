@@ -7,3 +7,10 @@ dependencies = [
     "ollama>=0.6.3",
     "requests>=2.34.2",
 ]
+
+[dependency-groups]
+dev = [
+    "markdown>=3.11.2",
+    "pypdfium2>=5.14.0",
+    "weasyprint>=70.0",
+]
