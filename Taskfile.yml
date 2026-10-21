@@ -47,3 +47,11 @@ tasks:
     desc: Extract all ciphertexts from evidence/task2/session_all.pcap into ciphertexts.csv
     cmds:
       - uv run python scripts/capture/extract_ciphertexts.py
+
+  freq:
+    desc: Frequency analysis of ciphertexts.csv - tables, patterns, candidate mapping, charts (report/figures/)
+    dir: scripts/frequency
+    cmds:
+      - uv run python count.py
+      - uv run python patterns.py
+      - uv run python plot.py

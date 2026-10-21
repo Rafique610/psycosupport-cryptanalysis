@@ -3,6 +3,7 @@ name = "psycosupport-cryptanalysis"
 version = "0.1.0"
 requires-python = ">=3.14"
 dependencies = [
+    "matplotlib>=3.11.2",
     "ollama>=0.6.3",
     "requests>=2.34.2",
 ]

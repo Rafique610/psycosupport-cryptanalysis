@@ -50,11 +50,12 @@ task offline-proof      # network off, model still answers, network back on
 task capture            # record loopback port 5000 to evidence/task2/session_all.pcap (Ctrl+C to stop)
 task run-cases          # send the 5 synthetic test cases through the real client
 task extract            # pcap -> ciphertexts.csv (20 ciphertexts, standard library only)
+task freq               # letter frequencies, patterns, candidate mapping, charts -> report/figures/
 ```
 
 ## Layout
 
 - `psycare_lab/`: the app. `server.py` (HTTP + Ollama), `client.py` (terminal client), `affine.py` (shared cipher), `requirements.txt`.
 - `ciphertexts.csv`: the 20 intercepted ciphertexts (deliverable).
-- `scripts/`: analysis. `capture/` has the test cases, the case runner and the pcap extractor; `frequency/` and `cipher/` come next. `evidence/`: captures and screenshots. `report/`: the write-up.
+- `scripts/`: analysis. `capture/` has the test cases, the case runner and the pcap extractor; `frequency/` counts letters, finds patterns and draws the charts (matplotlib); `cipher/` comes next. `evidence/`: captures and screenshots. `report/`: the write-up.
 - `docs/`: rules and project facts. Assignment brief: `docs/domain/psycosupport/assignment-brief.md`.
