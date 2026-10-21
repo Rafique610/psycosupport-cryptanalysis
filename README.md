@@ -8,6 +8,8 @@ with Al-Kindi frequency analysis, and write up the results.
 Working rules for agents: see [AGENTS.md](AGENTS.md) and [docs/docs/index.md](docs/docs/index.md).
 [INSTRUCTIONS.md](INSTRUCTIONS.md) is the older rules file, kept as history only.
 
+Repository: <https://github.com/Rafique610/psycosupport-cryptanalysis>
+
 ## Setup
 
 Requirements: Kali Linux, git, [uv](https://docs.astral.sh/uv/), [Ollama](https://ollama.com), Wireshark/tshark.
